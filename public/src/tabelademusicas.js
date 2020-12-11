@@ -247,4 +247,4 @@ $(document).ready(function(){
 		$("#link-yt").attr('src',url.replace("watch?v=","embed/"));
   	}
 	
-});	
+});	 
