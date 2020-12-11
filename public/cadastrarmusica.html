@@ -1,0 +1,103 @@
+[<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Formulário</title>
+		<link rel="stylesheet" href="css/panel.css"> 
+		<link type="text/css" rel="stylesheet" href="css/materialize.css"/>	
+		<link rel="stylesheet" href="css/crudmusica.css">
+		<link rel="stylesheet" href="css/crudvendedor.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+ <div class="nav-wrapper">
+	<nav class="black" style="margin-top:-2%">
+		<div class="nav-wrapper container">
+			<a class="select" href="index.html">Inicio</a>
+			<a class="select"   href="musica.html">Musicas</a>
+			<a class="select"  href="cadastrarmusica.html">Cadastro</a>
+				  
+		</div>  	    	
+	</nav>
+ </div>
+ <center>
+ 	<h1><font face="Arial Black" class="lugar"> <color="white">Cadastrar Música</font></h1>
+ </center>
+
+	<body>
+		<section >
+		<div class="container" >	
+			<div class="row ">
+				<form id="formularioMusica" class="col s12 " action="#" method="post">
+				 <div class="posicionartabela bordinha ">	
+					<div class="row">
+						<div class="input-field col s12">
+							<form action='api-url-here' method='post' encType="multipart/form-data" ></form>
+							<p>Capa do Album</p>
+							<img class="preview-img" id="capa-img" name="capa-img" style="width: 120px;">
+							<input id="capa" name="capa"  class="file-chooser validate" type="file" accept="image/*" onchange="novaimg();" >
+							</form>  
+						</div>
+						<div class="input-field col s6">
+						  <input id="nome" name="nome" type="text" class="validate">
+						  <label for="nome"><font color="black">Nome da Música</font></label>
+						</div>
+						<div class="input-field col s6">
+						  <input id="artista" name="artista" type="text" class="validate">
+						  <label for="artista"><font color="black">Nome do Artista</font></label>
+						</div>						
+					</div>
+
+					<div class="row">
+						<div class="input-field col s6">
+							<input id="ano" name="ano" type="text" class="validate" >
+							<label for="ano"><font color="black">Ano de Lançamento</font><label>						  	
+						</div>					
+					
+									         		
+						<div class="input-field col s6"> 
+							<select id="escolha" name="escolha" required>
+								<option value="" disabled selected>Escolha uma das opções </option>
+								<option value="Pop">POP</option>
+								<option value="Rock">ROCK</option>
+								<option value="Hiphop">HIP-HOP</option>
+								<option value="Sertanejo">SARTANEJO</option>
+								<option value="Samba">SAMBA</option>
+								<option value="Classica">CLASSICA</option>
+								<option value="Gospel">GOSPEL</option>
+							</select>
+							<label><font color="black">Gênero</font></label>
+						</div>
+					</div>	 
+
+					<div class="input-field col s12">
+						<input id="url" name="url" type="text" class="validate"> 
+						<label for="letra"><font color="black"> Url do Youtube</font></label>
+					</div>
+
+					<div class="input-field col s12">
+						<textarea id="letra" name="letra" type="text" class="validate"> </textarea>
+						<label for="letra"><font color="black">Letra da Música</font></label>
+					</div>
+
+						<div class="input-field col s12">
+							<center><button class=" waves-effect waves-light black" type="submit" id="salvar" name="salvar">Cadastrar</button> </center>
+						</div>
+				
+			       </div>
+				</form>
+			</div>  
+		</div> 
+	</section> 
+		
+		<script type="text/javascript" src="src/jquery.js"></script>
+		<script type="text/javascript" src="src/jquery.validate.js"></script>
+		<script type="text/javascript" src="src/jquery.mask.js"></script>
+		<script type="text/javascript" src="src/materialize.js"></script>
+		<script type="text/javascript" src="src/cadastrarmusica.js"></script>
+		<script type="text/javascript" src="src/cadastrarvendedor.js"></script>	
+		
+		
+		
+	</body>
+</html>
+

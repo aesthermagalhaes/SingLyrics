@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <head>
+            <title> Músicas </title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="css/reproduzir.css"> 
+            <link type="text/css" rel="stylesheet" href="css/materialize.css"/>	
+            <link rel="stylesheet" href="css/crudmusica.css">
+            <link rel="stylesheet" href="css/crudvendedor.css">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        </head>
+    
+    </head>
+    <body >
+
+        <nav class="black">
+            <div class="nav-wrapper container">
+                <a class="select" href="index.html">Inicio</a>
+                <a class="select"   href="musica.html">Musicas</a>
+                <a class="select"  href="cadastrarmusica.html">Cadastro</a>
+            	 	 
+            </div>  	    	
+        </nav>
+    <section>
+
+        
+        <h1> </h1>
+         <div class="flex-panel" style="background-color: rgb(255, 255, 255);">
+            <div class= "panel__header" style="background-color: black;">
+                <h1 class="panel__title"> </h1>
+            </div>
+
+            <div   > 
+                <ul id="repo-list">  
+           
+                    <section class="flex-container">
+                            <div id='capa-img'>
+                                <img >
+                            </div>
+
+                            <div class="repro">
+                                <strong id='capa-name'></strong>  
+                                <p id='artista'></p> </br>
+                            
+                                <p id='ano'> </p> 
+                                <p id='genero'></p> 
+                                </iframe>
+
+                            </div>
+                            
+                            <section>
+                                <iframe id='link-yt' width="420" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                            </section>
+                            
+                            <div style="background-color:black; ">
+                            </div>
+
+                    </section>
+
+                    <div style="margin-top: -2%; margin-left:2%;"> <p id='letra'></p> </div>
+
+                    <div>
+                        <center>
+                            <button style="width: 10%; margin-bottom: 2%;" onclick="editar()"> Editar</button>
+                            <button style="width: 10%; margin-bottom: 2%;" id="excluir"> Excluir</button>
+                        </center>
+                    </div>
+               </ul>
+            </div>
+        </div>
+    </section>
+    
+    
+    <script src="./bundle.js"></script>
+
+    <script>
+        function editar(){
+            location.href = 'editarmusica.html';
+        }
+    </script>
+    <script type="text/javascript" src="src/jquery.js"></script>
+    <script type="text/javascript" src="src/jquery.dataTables.js"></script>		
+    <script type="text/javascript" src="src/materialize.js"></script>
+    <script type="text/javascript" src="src/tabelademusicas.js"></script>		
+    </body>
+</html>
+        

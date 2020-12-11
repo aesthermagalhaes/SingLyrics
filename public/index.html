@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title> Músicas </title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/panel.css"> 
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"/>	
+        <link rel="stylesheet" href="css/crudmusica.css">
+		<link rel="stylesheet" href="css/crudvendedor.css">
+       
+        
+        
+    </head>
+    <body >
+        <nav class="black">
+            <div class="nav-wrapper container">
+                <a class="select" href="index.html">Inicio</a>
+                <a class="select"   href="musica.html">Musicas</a>
+                <a class="select"  href="cadastrarmusica.html">Cadastro</a>
+            	 	 
+            </div>  	    	
+        </nav>
+        
+    <section>
+        
+        <center>
+            <h1><font face="Arial Black" class="lugar"> <color="white"> Song Lyrics</font></h1>
+        </center>
+         <div class="flex-panel">
+            <div class= "panel__header">
+                 <h1 class="panel__title" >  TOP 5 SONGS</h1>
+            </div>
+
+            <div> 
+                <ul id="repo-list">  
+           
+                    <!-- Lista gerada -->
+
+               </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        
+        <center>
+            <h1><font face="Arial Black" class="lugar"> <color="white"> Músicas</font></h1>
+        </center>
+            <div class="flex-panel">
+                <div class= "panel__header">
+                   <h1 class="panel__title" > DISPONÍVEIS</h1>
+                </div>
+    
+                <div id="tabelaProduto" class="display highlight"> 
+                    <ul id="repo-list-avaliable">  
+                        <!-- Lista gerada -->
+                   </ul>
+                </div>
+            </div>
+
+            <form id="repo-form">
+                    
+            </form>
+            
+            
+
+
+       
+    </section>
+        <script src="./bundle.js"></script>
+        <script type="text/javascript" src="src/jquery.js"></script>
+		<script type="text/javascript" src="src/jquery.dataTables.js"></script>		
+		<script type="text/javascript" src="src/materialize.js"></script>
+		<script type="text/javascript" src="src/tabelademusicas.js"></script>	
+
+        <script>
+            function executaAcao(nome_img){
+        		localStorage.setItem('musicaSelecionada', JSON.stringify(nome_img));
+            	window.location = "reproduzir.html";
+            }
+        </script>
+    </body>
+</html>

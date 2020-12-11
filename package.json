@@ -1,0 +1,23 @@
+{
+  "name": "play",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "babel-loader": "8.0.0-beta.0",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --mode=development "
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "materialize": "^1.0.0",
+    "webpack-merge": "5.5.0"
+  }
+}

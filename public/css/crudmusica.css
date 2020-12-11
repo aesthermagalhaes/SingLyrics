@@ -1,0 +1,134 @@
+html{
+	background:#BEBEBE;
+}
+.collection{
+	margin-top:20%;
+	position:fixed;
+	width:50%;
+	right:25%;
+}
+.galo1{
+	 width:3.2%;
+	 margin-top:0%;
+	 float:left;
+	
+}
+.galo{
+	width:3.2%;
+	 margin-top:0%;
+	 float:right;
+}
+
+.voltar{
+      width:5%;
+	  margin-top:47%;
+	  float:right;
+	  margin-right:10%;
+} 
+
+
+h1{
+	font-size:30px;
+}
+
+label{
+	font-size:20px;
+}
+
+
+button{
+	padding: .5em 2em;
+	border: 0;
+	border-bottom: 3px solid black;
+	font-size: 1.2em;
+	cursor: pointer;
+	margin: 0;
+	margin-top: -50px;
+	color: white;
+	background-color:black;
+	width:30%;
+	text-align: center;	
+	
+}
+
+button:active{
+	margin-top: 0;
+	border: 0;
+}
+
+
+.areaCampo1{
+	width:50%;
+	margin-left:25%;
+	margin-top:5%;
+}
+
+.posicionartabela{
+	margin-top:20%;
+	position:center;
+}
+
+.input-field div.error {
+	color: red ;
+	margin-top: -15px;
+	padding: 0;
+	font-size: 0.9em; 
+
+}
+
+
+.bordinha{
+	margin-top: -3%;
+	height:5;
+	margin-right:25%;
+	float:right;
+	border-radius: 20px;
+	box-sizing: border-box;
+	padding: 30px;
+	width:50%;
+	
+}
+
+button {
+    margin-top: 10px;
+	width:50%;
+    border-radius: 10px;
+}
+
+
+.posicionamento{
+	float: right;
+	margin-top: -2.7%;
+	margin-right: 2%;
+
+}
+/* label color */
+   .input-field label {
+     color: white !important;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: white !important;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid white !important;
+     box-shadow: 0 1px 0 0 white !important;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid white !important;
+     box-shadow: 0 1px 0 0 white !important;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid white !important;
+     box-shadow: 0 1px 0 0 white !important;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: white !important;
+   }
+
+   
+    

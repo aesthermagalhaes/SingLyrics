@@ -1,0 +1,32 @@
+html{
+	background:#BEBEBE;
+}
+.collection{
+	margin-top:20%;
+	position:fixed;
+	width:50%;
+	right:25%;
+}
+.galo1{
+	 width:3.2%;
+	 margin-top:0%;
+	 float:left;
+	
+}
+.galo{
+	width:3.2%;
+	 margin-top:0%;
+	 float:right;
+}
+
+.voltar{
+      width:7%;
+	  margin-top:50%;
+	  float:right;
+	  margin-right:-17%;
+}	
+
+.posicionar{
+	margin-top: 5%;
+	
+}  
