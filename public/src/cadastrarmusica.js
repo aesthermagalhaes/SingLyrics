@@ -102,10 +102,6 @@ $("#formularioMusica").validate(
 
 			nome: {
 				required: true
-			},
-
-			url: {
-				required: true
 			}
 
 
@@ -130,10 +126,6 @@ $("#formularioMusica").validate(
 				required: "Favor preencher o campo Letra",
 			},
 
-			url: {
-				required: "Favor preencher o campo Url",
-
-			},
 			capa: {
 				required: "Favor preencher o campo capa",
 			}

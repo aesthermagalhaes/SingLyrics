@@ -63,9 +63,11 @@ $(document).ready(function(){
 	if(url_atual.indexOf('musica.html') != -1 || url_atual.indexOf('index.html') != -1){
 		$html=createTableWithNewContent(musicas);
 		$("#repo-list").prepend($html);
-		if(url_atual.indexOf('musica.html') != -1 || url_atual.indexOf('index.html') != -1){
-			$html2=createTableWithAvailableContent(musicas);
-			$("#repo-list-avaliable").prepend($html2);
+		if(url_atual.indexOf('index.html') != -1){
+			$html2=createTableWithTopFiveContent(musicas);
+			$("#repo-list-top-5").prepend($html2);
+			$html3=createTableWithAvailableContent(musicas);
+			$("#repo-list-avaliable").prepend($html3);
 		}
 	}else if(url_atual.indexOf('reproduzir.html') != -1){
 		generatorPageMusic(musicas);
@@ -146,23 +148,27 @@ $(document).ready(function(){
 		let vetContent = JSON.parse(localStorage.getItem('tabelaMusica'));
 	    let musicaSelecionada = JSON.parse(localStorage.getItem('musicaSelecionada'));
 	    let index = 0;
-	    if(!((typeof vetContent == "undefined" || vetContent == null) && (musicaSelecionada != 0 && musicaSelecionada != 1 && musicaSelecionada != 2)
-	        && (typeof musicaSelecionada == "undefined" || musicaSelecionada == null)) ){
-	        let have = false;
-	        for (let i = vetContent.length - 1; i >= 0; i--) {
-	            if(vetContent[i]['nome']==musicaSelecionada){
-	                index = i;
-	                have = true;
-	            }
-	        }
-	        if(have){
-	            let exclude = vetContent[index];
-	            vetContent.splice(vetContent.indexOf(exclude), 1);
-	            localStorage.setItem('tabelaMusica', JSON.stringify(vetContent));
-	            alert('Excluido com sucesso');
-	            $(location).attr('href', 'musica.html');
-	        }
-	    }
+	    if(vetContent.length > 5){
+		    if(!((typeof vetContent == "undefined" || vetContent == null) && (musicaSelecionada != 0 && musicaSelecionada != 1 && musicaSelecionada != 2)
+		        && (typeof musicaSelecionada == "undefined" || musicaSelecionada == null)) ){
+		        let have = false;
+		        for (let i = vetContent.length - 1; i >= 0; i--) {
+		            if(vetContent[i]['nome']==musicaSelecionada){
+		                index = i;
+		                have = true;
+		            }
+		        }
+		        if(have){
+		            let exclude = vetContent[index];
+		            vetContent.splice(vetContent.indexOf(exclude), 1);
+		            localStorage.setItem('tabelaMusica', JSON.stringify(vetContent));
+		            alert('Excluido com sucesso');
+		            $(location).attr('href', 'musica.html');
+		        }
+		    }
+		}else{
+			alert('Não foi possível excluir. Limite minimo de músicas cadastradas');
+		}
 	});
 
 	function createTableWithNewContent(vetContent){
@@ -218,6 +224,31 @@ $(document).ready(function(){
 	    return $html;
 	}
 
+	//For available songs
+	function createTableWithTopFiveContent(vetContent){
+		
+		$html = '';
+		if(!(typeof vetContent == "undefined" || vetContent == null)){
+			for (var i = 0; i < 5; i++) {
+				$html += '<section class="flex-container" id="clicavel" onclick="executaAcao(\''+vetContent[i]['nome']+'\')">'+
+		            '<div class="flex-item1">'+
+		            '    <img src="'+vetContent[i]['capa']+'"/>'+
+		            '</div>'+
+		            '<div class="flex-item2">'+
+		            '    <strong>  '+vetContent[i]['nome']+'  </strong>'+
+		            '    <p>'+vetContent[i]['artista']+'</p> '+
+		            '</div>'+
+		            '<div class="flex-item3">'+
+		            '    <p> '+vetContent[i]['ano']+'</p>'+
+		            '    <p> '+vetContent[i]['escolha']+' </p>'+ 
+		            '</div>'+       
+		        '</section>';	
+		    }
+		}
+
+	    return $html;
+	}
+
 	function generatorPageMusic(vetContent){
 		let musicaSelecionada = JSON.parse(localStorage.getItem('musicaSelecionada'));
 		if(!(typeof vetContent == "undefined" || vetContent == null)){
@@ -247,4 +278,4 @@ $(document).ready(function(){
 		$("#link-yt").attr('src',url.replace("watch?v=","embed/"));
   	}
 	
-});	 
+});	
